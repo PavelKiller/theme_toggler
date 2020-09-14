@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans"
+}
+
+body{
+  background: #F3E8E0;
+  height: 100vh;
+}
+main{
+  margin:0 auto;
+  width:250px;
+  display: flex;
+  flex-direction: column;
+}
+section{
+  margin-top: 30px;
+  padding:18px 0px 20px 25px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 35px -15px #E0B394;
+}
+section h2{
+ padding-top:0;
+ font-size: 24px;
+}
+input[type="checkbox"]{
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+input[type="checkbox"] ~ label{
+  display: flex;
+  flex-direction: row;
+  line-height: 28px;
+  cursor: pointer;
+}
+.toggle_switch{
+  width:60px;
+  height:30px;
+  margin-right: 15px;
+  border-radius: 50px;
+  background: #AEB2B9;
+  transition: background 0.2s ease;
+}
+.toggle_switch div{
+  position: relative;
+  border-radius: 25px;
+  height: 24px;
+  width:24px;
+  background: #FFF;
+  top: 3px;
+  left:3px;
+  transition-property: transform, width;
+  transition-duration: .3s;
+  transition-timing-function: ease;
+}
+.setting_desc{
+  font-size: 13px;
+  text-align: justify;
+  padding-top: 5px;
+  padding-right: 30px;
+}
+input[type="checkbox"]:checked ~ label .toggle_switch div{
+  transform: translateX(30px);
+}
+label:active .toggle_switch div{
+  width:35px;
+}
+input[type="checkbox"]:checked ~ label:active .toggle_switch div{
+  transform: translateX(20px);
+}
+input[type="checkbox"]:checked ~ label .toggle_switch{
+  background-color: #FCC43D;
+}
+
+.darkmode{
+  color:white;
+  background:#181818;
+}
+.darkmode main section{
+  background: #323232;
+  box-shadow:0 0 35px -15px #2a2a2a;
+}
